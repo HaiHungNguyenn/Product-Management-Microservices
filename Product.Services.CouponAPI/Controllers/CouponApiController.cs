@@ -55,7 +55,23 @@ public class CouponApiController : ControllerBase
         return _response;
 
     }
+    [HttpGet]
+    [Route("{code}")]
+    public async Task<ResponseDto> GetByCode(string code)
+    {
+        try
+        {
+            Coupon coupon = await _db.Coupons.FirstAsync(x => x.CouponCode == code);
+            _response.Result = _mapper.Map<CouponDto>(coupon);
+        }
+        catch (Exception e)
+        {
+            _response.Message = e.Message;
+            _response.IsSuccess = false;
+        }
+        return _response;
 
+    }
     [HttpPost]
     public async Task<ResponseDto> Add([FromBody] CouponDto couponDto)
     {
