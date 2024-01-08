@@ -1,38 +1,18 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Product.Services.CouponAPI.Models;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+namespace Product.Services.AuthAPI.Data;
 
-namespace Product.Services.CouponAPI.Data;
-
-public class AppDbContext : DbContext
+public class AppDbContext : IdentityDbContext<IdentityUser>
 {
     public AppDbContext(DbContextOptions<AppDbContext> options): base(options)
     {
+        
     }
-    public DbSet<Coupon> Coupons { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
-        modelBuilder.Entity<Coupon>().HasData(new Coupon()
-        {
-            CouponId = 1,
-            CouponCode = "10OFF",
-            DiscountAmount = 10,
-            MinAmount = 20,
-        });
-        modelBuilder.Entity<Coupon>().HasData(new Coupon()
-        {
-            CouponId = 2,
-            CouponCode = "20OFF",
-            DiscountAmount = 10,
-            MinAmount = 20,
-        });
-        modelBuilder.Entity<Coupon>().HasData(new Coupon()
-        {
-            CouponId = 3,
-            CouponCode = "30OFF",
-            DiscountAmount = 10,
-            MinAmount = 20,
-        });
+        
     }
 }
