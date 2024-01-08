@@ -6,7 +6,7 @@ using Product.Services.CouponAPI.Models;
 using Product.Services.CouponAPI.Models.Dto;
 
 namespace Product.Services.CouponAPI.Controllers;
-[Route("/api/[controller]")]
+[Route("/api/coupon")]
 [ApiController]
 public class CouponApiController : ControllerBase
 {
@@ -107,6 +107,7 @@ public class CouponApiController : ControllerBase
         return _response;
     }
     [HttpDelete]
+    [Route("{id:int}")]
     public async Task<ResponseDto> Delete(int id)
     {
         try
