@@ -6,7 +6,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GateWay", "GateWay", "{36B3
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{696C574E-2A16-44EA-A5B7-22B12F4D9AB0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mango.Services.CouponAPI", "Mango.Services.CouponAPI\Mango.Services.CouponAPI.csproj", "{2D4652A9-ECA9-4AC1-BC76-715339BB0D5C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Integration", "Integration", "{528C0797-97DE-4465-98E9-2853C7D06D40}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Product.Services.CouponAPI", "Product.Services.CouponAPI\Product.Services.CouponAPI.csproj", "{6D1E9D94-6A71-4412-B86F-3005AFCDC726}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Product.Web", "Product.Web\Product.Web.csproj", "{758C6F00-542E-4690-A4BC-0ACA6DE53A4E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -14,12 +18,17 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2D4652A9-ECA9-4AC1-BC76-715339BB0D5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2D4652A9-ECA9-4AC1-BC76-715339BB0D5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2D4652A9-ECA9-4AC1-BC76-715339BB0D5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2D4652A9-ECA9-4AC1-BC76-715339BB0D5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D1E9D94-6A71-4412-B86F-3005AFCDC726}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D1E9D94-6A71-4412-B86F-3005AFCDC726}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D1E9D94-6A71-4412-B86F-3005AFCDC726}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D1E9D94-6A71-4412-B86F-3005AFCDC726}.Release|Any CPU.Build.0 = Release|Any CPU
+		{758C6F00-542E-4690-A4BC-0ACA6DE53A4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{758C6F00-542E-4690-A4BC-0ACA6DE53A4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{758C6F00-542E-4690-A4BC-0ACA6DE53A4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{758C6F00-542E-4690-A4BC-0ACA6DE53A4E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{2D4652A9-ECA9-4AC1-BC76-715339BB0D5C} = {696C574E-2A16-44EA-A5B7-22B12F4D9AB0}
+		{6D1E9D94-6A71-4412-B86F-3005AFCDC726} = {696C574E-2A16-44EA-A5B7-22B12F4D9AB0}
+		{758C6F00-542E-4690-A4BC-0ACA6DE53A4E} = {F263D767-0292-437B-B400-EAA4F1029B70}
 	EndGlobalSection
 EndGlobal
