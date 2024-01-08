@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Product.Services.AuthAPI.Data;
+using Product.Services.AuthAPI.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,7 +15,12 @@ builder.Services.AddDbContext<AppDbContext>(option =>
 {
     option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
-builder.Services.AddIdentity<IdentityUser,IdentityRole>().AddEntityFrameworkStores<AppDbContext>()
+
+// cau hinh identity cho ứng dụng 
+// AddEntityFrameworkStores<AppDbContext> : dùng để khai báo cho identity biêts nenr lưu thông tin người dùng và vai trof vào CSDL nào 
+// thông qua AppDbContext (ở đây là SQLServer)
+// AddDefaultTokenProviders(): thêm các triển khai mặc định của provider token
+builder.Services.AddIdentity<ApplicationUser,IdentityRole>().AddEntityFrameworkStores<AppDbContext>()
     .AddDefaultTokenProviders();
 var app = builder.Build();
 
